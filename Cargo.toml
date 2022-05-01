@@ -7,6 +7,14 @@ edition = "2021"
 name = "hello"
 path = "src/hello/main.rs"
 
+[[bin]]
+name = "read_file"
+path = "src/file/read_file.rs"
+
+[[bin]]
+name = "write_file"
+path = "src/file/write_file.rs"
+
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
