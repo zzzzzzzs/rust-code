@@ -8,6 +8,35 @@ name = "hello"
 path = "src/hello/main.rs"
 
 [[bin]]
+name = "json"
+path = "src/json/main.rs"
+
+[[bin]]
+name = "string"
+path = "src/string/main.rs"
+
+[[bin]]
+name = "stdin"
+path = "src/stdin/main.rs"
+
+[[bin]]
+name = "tuple"
+path = "src/tuple/main.rs"
+
+[[bin]]
+name = "arr"
+path = "src/arr/main.rs"
+
+[[bin]]
+name = "slice"
+path = "src/slice/main.rs"
+
+[[bin]]
+name = "mysql"
+path = "src/mysql/main.rs"
+
+
+[[bin]]
 name = "read_file"
 path = "src/file/read_file.rs"
 
@@ -18,3 +47,8 @@ path = "src/file/write_file.rs"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+json = "*"
+
+rand = "0.8.5"
+
+mysql = "20.0.0"
