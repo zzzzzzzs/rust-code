@@ -35,6 +35,9 @@ path = "src/slice/main.rs"
 name = "mysql"
 path = "src/mysql/main.rs"
 
+[[bin]]
+name = "excel"
+path = "src/excel/main.rs"
 
 [[bin]]
 name = "read_file"
@@ -52,3 +55,9 @@ json = "*"
 rand = "0.8.5"
 
 mysql = "20.0.0"
+# 用来生成新的文件名
+uuid = {version= "0.7",features=["serde","v4"]}
+# 导出excel关键依赖
+simple_excel_writer = "0.1.7"
+# 用于生成存储时的路径名
+chrono = "*"
