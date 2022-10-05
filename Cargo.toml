@@ -47,6 +47,14 @@ path = "src/file/read_file.rs"
 name = "write_file"
 path = "src/file/write_file.rs"
 
+[[bin]]
+name = "curl"
+path = "src/curl/main.rs"
+
+[[bin]]
+name = "rayon"
+path = "src/rayon/main.rs"
+
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
@@ -61,3 +69,7 @@ uuid = {version= "0.7",features=["serde","v4"]}
 simple_excel_writer = "0.1.7"
 # 用于生成存储时的路径名
 chrono = "*"
+# 并行计算库
+rayon = "1.5"
+reqwest = { version = "0.11", features = ["json"] }
+tokio = { version = "1", features = ["full"] }
