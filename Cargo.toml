@@ -44,6 +44,10 @@ name = "read_file"
 path = "src/file/read_file.rs"
 
 [[bin]]
+name = "watch_file"
+path = "src/file/watch_file.rs"
+
+[[bin]]
 name = "write_file"
 path = "src/file/write_file.rs"
 
@@ -73,3 +77,5 @@ chrono = "*"
 rayon = "1.5"
 reqwest = { version = "0.11", features = ["json"] }
 tokio = { version = "1", features = ["full"] }
+
+hotwatch = "0.4.6"
