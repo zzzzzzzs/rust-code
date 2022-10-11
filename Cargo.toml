@@ -59,7 +59,33 @@ path = "src/curl/main.rs"
 name = "rayon"
 path = "src/rayon/main.rs"
 
+[[bin]]
+name = "guess"
+path = "src/guess/main.rs"
+
+[[bin]]
+name = "test"
+path = "src/test/main.rs"
+
+[[bin]]
+name = "ownership"
+path = "src/ownership/main.rs"
+
+[[bin]]
+name = "reference_borrowing"
+path = "src/reference_borrowing/main.rs"
+
+[[bin]]
+name = "struct"
+path = "src/struct/main.rs"
+
+[[bin]]
+name = "rectangles"
+path = "src/rectangles/main.rs"
+
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+
 
 [dependencies]
 json = "*"
