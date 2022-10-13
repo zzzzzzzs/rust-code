@@ -1,5 +1,6 @@
 fn main() {
     // TODO 引用 reference
+    // 如果还想使用原来的值那么就使用引用【&】。如果想复制一个值，那么就使用【=】。
     let s1 = String::from("hello");
     let len = calculate_lenght(&s1);
     println!("The length of '{}' is {}", s1, len);

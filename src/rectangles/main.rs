@@ -4,6 +4,7 @@ struct Rectangle {
     height: u32,
 }
 
+// TODO 求长方形面积
 fn main() {
     let width1 = 30;
     let height1 = 50;

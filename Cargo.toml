@@ -83,6 +83,31 @@ path = "src/struct/main.rs"
 name = "rectangles"
 path = "src/rectangles/main.rs"
 
+[[bin]]
+name = "method"
+path = "src/method/main.rs"
+
+
+[[bin]]
+name = "enums"
+path = "src/enums/main.rs"
+
+[[bin]]
+name = "option"
+path = "src/option/main.rs"
+
+[[bin]]
+name = "match"
+path = "src/match/main.rs"
+
+[[bin]]
+name = "vec"
+path = "src/vec/main.rs"
+
+[[bin]]
+name = "hashmap"
+path = "src/hashmap/main.rs"
+
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 
