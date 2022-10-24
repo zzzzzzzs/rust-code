@@ -52,8 +52,8 @@ name = "write_file"
 path = "src/file/write_file.rs"
 
 [[bin]]
-name = "curl"
-path = "src/curl/main.rs"
+name = "http"
+path = "src/http/main.rs"
 
 [[bin]]
 name = "rayon"
@@ -108,6 +108,26 @@ path = "src/vec/main.rs"
 name = "hashmap"
 path = "src/hashmap/main.rs"
 
+[[bin]]
+name = "panic"
+path = "src/panic/main.rs"
+
+[[bin]]
+name = "generic"
+path = "src/generic/main.rs"
+
+[[bin]]
+name = "trait"
+path = "src/trait/main.rs"
+
+[[bin]]
+name = "minigrep"
+path = "src/minigrep/main.rs"
+
+[[bin]]
+name = "docx"
+path = "src/docx/main.rs"
+
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 
@@ -130,3 +150,6 @@ reqwest = { version = "0.11", features = ["json"] }
 tokio = { version = "1", features = ["full"] }
 
 hotwatch = "0.4.6"
+
+[profile.release]
+panic = 'abort'
