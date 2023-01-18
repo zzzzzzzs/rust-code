@@ -23,6 +23,6 @@ fn send(event_type: &EventType) {
 }
 
 fn main() {
+    send(&EventType::KeyPress(Key::ControlLeft));
     send(&EventType::KeyPress(Key::KeyS));
-    send(&EventType::KeyRelease(Key::KeyS));
 }

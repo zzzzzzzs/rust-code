@@ -1,16 +1,21 @@
-use device_query::{DeviceEvents, DeviceState};
-use std::{thread, time};
-// CPU 占用太高了
+use std::thread;
+use std::time::Duration;
+use device_query::{DeviceQuery, DeviceState, Keycode};
+// CPU 高
+// https://github.com/ostrosco/device_query/issues/61
 fn main() {
     let device_state = DeviceState::new();
-    let _guard = device_state.on_key_down(|key| {
-        println!("Down: {:#?}", key);
-    });
-    let _guard = device_state.on_key_up(|key| {
-        println!("Up: {:#?}", key);
-    });
-
+    let mut prev_keys = vec![];
     loop {
-        thread::sleep(time::Duration::from_millis(20));
+        let keys = device_state.get_keys();
+        if keys != prev_keys {
+            if keys.len() == 2 && keys.contains(&Keycode::LControl) && keys.contains(&Keycode::S) {
+                println!("ctrl + s 被按下")
+            }
+            println!("{:?}", keys);
+        }
+        prev_keys = keys;
+        // 降低 CPU
+        thread::sleep(Duration::from_millis(50));
     }
 }

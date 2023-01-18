@@ -1,24 +1,20 @@
-use std::{thread::sleep, time::Duration};
+use std::path::Path;
+use notify::{Watcher, RecommendedWatcher, RecursiveMode, Result};
 
-fn main() {
-    use hotwatch::{Event, Hotwatch};
+fn main() -> Result<()> {
+    // Automatically select the best implementation for your platform.
+    let mut watcher = notify::recommended_watcher(|res| {
+        match res {
+            Ok(event) => println!("event: {:?}", event),
+            Err(e) => println!("watch error: {:?}", e),
+        }
+    })?;
 
-    let mut hotwatch = Hotwatch::new().expect("hotwatch failed to initialize!");
-    hotwatch
-        .watch("C:/test.txt", |event: Event| {
-            println!("get some event {:?}",event);
-            if let Event::Write(path) = event {
-                if path.file_name().unwrap().to_str().unwrap().eq("test.txt") {
-                    println!("test.txt has changed.{:?}",path);
-                }
-                else{
-                    println!("other file has been changed!{:?}",path);
-                }
-            }
-        })
-        .expect("failed to watch file!");
+    // Add a path to be watched. All files and directories at that path and
+    // below will be monitored for changes.
+    watcher.watch(Path::new("."), RecursiveMode::Recursive)?;
 
     loop {
-        sleep(Duration::from_secs(2));
+
     }
 }
