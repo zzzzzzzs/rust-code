@@ -128,21 +128,51 @@ path = "src/minigrep/main.rs"
 name = "docx"
 path = "src/docx/main.rs"
 
+[[bin]]
+name = "KeyPress"
+path = "src/hotkey/KeyPress.rs"
+
+[[bin]]
+name = "DetectPress"
+path = "src/hotkey/DetectPress.rs"
+
+[[bin]]
+name = "HotKey"
+path = "src/hotkey/HotKey.rs"
+
+[[bin]]
+name = "DeviceQuery"
+path = "src/hotkey/DeviceQuery.rs"
+
+[[bin]]
+name = "KeyListen"
+path = "src/hotkey/KeyListen.rs"
+
+
+[[bin]]
+name = "active-win"
+path = "src/active-win/active-win.rs"
+
+[[bin]]
+name = "sysinfo"
+path = "src/sysinfo/main.rs"
+
+[[bin]]
+name = "signals-demo"
+path = "src/signals/signals-demo.rs"
+
+
+
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
-
-
 [dependencies]
+#mysql = "*"
 json = "*"
-
 rand = "0.8.5"
-
-mysql = "20.0.0"
 # 用来生成新的文件名
-uuid = {version= "0.7",features=["serde","v4"]}
+uuid = "1.2.2"
 # 导出excel关键依赖
 simple_excel_writer = "0.1.7"
-# 用于生成存储时的路径名
 chrono = "*"
 # 并行计算库
 rayon = "1.5"
@@ -150,6 +180,12 @@ reqwest = { version = "0.11.11", features = ["json", "cookies"] }
 tokio = { version = "1", features = ["full"] }
 serde_json = "1.0"
 hotwatch = "0.4.6"
-
-[profile.release]
-panic = 'abort'
+sysinfo = "0.27.6"
+active-win-pos-rs = "0.7"
+device_query = "1.1.2"
+# enigo 有问题，https://github.com/enigo-rs/enigo/issues/121
+#   修复在 pr https://github.com/enigo-rs/enigo/pull/122
+enigo = {git="https://github.com/zzzzzzzs/enigo", branch ="master"}
+signal-hook = "0.3.14"
+windows-hotkeys = "0.1.1"
+rdev = "0.5.2"
