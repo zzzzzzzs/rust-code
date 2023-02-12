@@ -1,0 +1,192 @@
+[package]
+name = "rust-code"
+version = "0.1.0"
+edition = "2021"
+
+#[[bin]]
+#name = "hello"
+#path = "src/hello/main.rs"
+#
+#[[bin]]
+#name = "json"
+#path = "src/json/main.rs"
+#
+#[[bin]]
+#name = "string"
+#path = "src/string/main.rs"
+#
+#[[bin]]
+#name = "stdin"
+#path = "src/stdin/main.rs"
+#
+#[[bin]]
+#name = "tuple"
+#path = "src/tuple/main.rs"
+#
+#[[bin]]
+#name = "arr"
+#path = "src/arr/main.rs"
+#
+#[[bin]]
+#name = "slice"
+#path = "src/slice/main.rs"
+#
+#[[bin]]
+#name = "mysql"
+#path = "src/mysql/main.rs"
+#
+#[[bin]]
+#name = "excel"
+#path = "src/excel/main.rs"
+#
+#[[bin]]
+#name = "read_file"
+#path = "src/file/read_file.rs"
+#
+#[[bin]]
+#name = "watch_file"
+#path = "src/file/watch_file.rs"
+#
+#[[bin]]
+#name = "write_file"
+#path = "src/file/write_file.rs"
+#
+#[[bin]]
+#name = "http"
+#path = "src/http/main.rs"
+#
+#[[bin]]
+#name = "guess"
+#path = "src/guess/main.rs"
+#
+#[[bin]]
+#name = "test"
+#path = "src/test/main.rs"
+#
+#[[bin]]
+#name = "ownership"
+#path = "src/ownership/main.rs"
+#
+#[[bin]]
+#name = "reference_borrowing"
+#path = "src/reference_borrowing/main.rs"
+#
+#[[bin]]
+#name = "struct"
+#path = "src/struct/main.rs"
+#
+#[[bin]]
+#name = "rectangles"
+#path = "src/rectangles/main.rs"
+#
+#[[bin]]
+#name = "method"
+#path = "src/method/main.rs"
+#
+#
+#[[bin]]
+#name = "enums"
+#path = "src/enums/main.rs"
+#
+#[[bin]]
+#name = "option"
+#path = "src/option/main.rs"
+#
+#[[bin]]
+#name = "match"
+#path = "src/match/main.rs"
+#
+#[[bin]]
+#name = "vec"
+#path = "src/vec/main.rs"
+#
+#[[bin]]
+#name = "hashmap"
+#path = "src/hashmap/main.rs"
+#
+#[[bin]]
+#name = "panic"
+#path = "src/panic/main.rs"
+#
+#[[bin]]
+#name = "generic"
+#path = "src/generic/main.rs"
+#
+#[[bin]]
+#name = "trait"
+#path = "src/trait/main.rs"
+#
+#[[bin]]
+#name = "minigrep"
+#path = "src/minigrep/main.rs"
+#
+#[[bin]]
+#name = "docx"
+#path = "src/docx/main.rs"
+#
+#[[bin]]
+#name = "KeyPress"
+#path = "src/hotkey/KeyPress.rs"
+#
+#[[bin]]
+#name = "DetectPress"
+#path = "src/hotkey/DetectPress.rs"
+#
+#[[bin]]
+#name = "HotKey"
+#path = "src/hotkey/HotKey.rs"
+#
+#[[bin]]
+#name = "DeviceQuery"
+#path = "src/hotkey/DeviceQuery.rs"
+#
+#[[bin]]
+#name = "KeyListen"
+#path = "src/hotkey/KeyListen.rs"
+#
+#[[bin]]
+#name = "inputbot-demo"
+#path = "src/hotkey/inputbot-demo.rs"
+#
+#[[bin]]
+#name = "active-win"
+#path = "src/active-win/active-win.rs"
+#
+##[[bin]]
+##name = "sysinfo"
+##path = "src/sysinfo/main.rs"
+#
+#[[bin]]
+#name = "signals-demo"
+#path = "src/signals/signals-demo.rs"
+#
+
+
+
+
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+#mysql = "*"
+json = "*"
+
+# 用来生成新的文件名
+uuid = "1.2.2"
+# 导出excel关键依赖
+simple_excel_writer = "0.1.7"
+chrono = "*"
+
+reqwest = { version = "0.11.11", features = ["json", "cookies"] }
+tokio = { version = "1", features = ["full"] }
+serde_json = "1.0"
+notify = "5.0.0"
+active-win-pos-rs = "0.7"
+device_query = "1.1.2"
+# enigo 有问题，https://github.com/enigo-rs/enigo/issues/121
+#   修复在 pr https://github.com/enigo-rs/enigo/pull/122
+enigo = {git="https://github.com/zzzzzzzs/enigo", branch ="master"}
+signal-hook = "0.3.14"
+windows-hotkeys = "0.1.1"
+rdev = "0.5.2"
+inputbot = "0.5.1"
